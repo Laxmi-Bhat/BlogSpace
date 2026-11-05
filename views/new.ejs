@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Blog | BlogSpace</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <h1>Create New Blog</h1>
+
+    <div class="form-container">
+        <form action="/posts" method="POST">
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter Username" required>
+
+            <label for="content">Your Blog</label>
+            <textarea id="content" name="content" placeholder="Write your post..." required></textarea>
+
+            <div class="form-buttons">
+                <button type="submit" class="submit">Publish Post</button>
+                <a href="/posts" class="cancel">Cancel</a>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Blog | BlogSpace</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Edit Your Post</h1>
+
+<div class="form-container">
+
+    <p class="blog-id">Post ID: <%= post.id %></p>
+    <h3 class="user">Username: @<%= post.username %></h3>
+
+    <form action="/posts/<%= post.id %>?_method=PATCH" method="POST">
+
+        <label for="content">Your Blog</label>
+        <textarea id="content" name="content" rows="10" required><%= post.content %></textarea>
+
+        <div class="form-buttons">
+            <button type="submit" class="submit">Update Post</button>
+            <a href="/posts" class="cancel">Cancel</a>
+        </div>
+
+    </form>
+
+</div>
+</body>
+</html>
