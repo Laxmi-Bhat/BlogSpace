@@ -88,6 +88,6 @@ app.delete("/posts/:id",(req, res) =>{
     res.redirect("/posts");
 })
 
-app.listen(port, (req, res) =>{
+app.listen(port, () =>{
     console.log("This is root");
 });
